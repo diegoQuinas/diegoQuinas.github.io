@@ -46,6 +46,9 @@ jobs:
       - name: Build SSG
         run: cargo run --bin ssg --release
 
+      - name: Copy blog to dist
+        run: cp -r blog/ dist/blog/
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
