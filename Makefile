@@ -1,26 +1,13 @@
-.PHONY: all ssg wasm tailwind serve clean
+.PHONY: blog blog-serve blog-clean
 
-WASM_TARGET = wasm32-unknown-unknown
-RELEASE_DIR = target/$(WASM_TARGET)/release
-OUT_DIR = dist
+# Build the blog from blog-src/ into ./blog (committed and served by GitHub Pages).
+blog:
+	cd blog-src && zola build --output-dir ../blog --force
 
-all: tailwind ssg wasm
+# Live-reload preview while writing posts.
+blog-serve:
+	cd blog-src && zola serve
 
-tailwind:
-	npx @tailwindcss/cli -i ./tailwind.css -o ./assets/tailwind.css
-
-ssg:
-	cargo run --bin ssg --release
-
-wasm:
-	cargo build --bin diegoquinas-rs --target $(WASM_TARGET) --features web --release
-	wasm-bindgen $(RELEASE_DIR)/diegoquinas-rs.wasm \
-		--out-dir $(OUT_DIR)/assets \
-		--target web
-
-serve:
-	cd $(OUT_DIR) && python3 -m http.server 8000
-
-clean:
-	rm -rf $(OUT_DIR)
-	cargo clean
+# Remove the generated output.
+blog-clean:
+	rm -rf blog

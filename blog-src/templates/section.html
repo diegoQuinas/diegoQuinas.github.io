@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Blog - Diego Perez Giordán{% endblock title %}
+{% block description %}{{ section.description }}{% endblock description %}
+
+{% block content %}
+<div class="blog-container">
+    <header class="blog-header">
+        <h1>Blog</h1>
+        <p class="blog-subtitle">{{ section.description }}</p>
+    </header>
+
+    <ul class="post-list">
+        {% for page in section.pages %}
+        <li class="post-item">
+            <a class="post-link" href="/blog/{{ page.slug }}/">
+                <time class="post-date" datetime="{{ page.date }}"
+                    >{{ page.date | date(format="%b %d, %Y") }}</time
+                >
+                <span class="post-title">{{ page.title }}</span>
+            </a>
+            {% if page.description %}
+            <p class="post-desc">{{ page.description }}</p>
+            {% endif %}
+        </li>
+        {% else %}
+        <li class="post-empty">No posts yet.</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock content %}

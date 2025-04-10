@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+        <meta
+            name="description"
+            content="{% block description %}{{ config.description }}{% endblock description %}"
+        />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Portfolio theme (CSS variables, fonts, nav) - reused as-is. -->
+        <link rel="stylesheet" href="/style.css" />
+        <!-- Blog-only additions (prose + code blocks). Root-relative so it
+             resolves both locally (http server) and in production. -->
+        <link rel="stylesheet" href="/blog/blog.css" />
+        <link
+            rel="alternate"
+            type="application/rss+xml"
+            title="RSS"
+            href="/blog/rss.xml"
+        />
+    </head>
+    <body>
+        <nav class="nav scrolled">
+            <div class="nav-inner">
+                <a href="/" class="nav-logo">dpg<span class="accent">.</span></a>
+                <div class="nav-links">
+                    <a href="/">Home</a>
+                    <a href="/blog/" class="active">Blog</a>
+                </div>
+            </div>
+        </nav>
+
+        <main class="blog-main">
+            {% block content %}{% endblock content %}
+        </main>
+
+        <footer class="blog-footer">
+            <p>
+                © Diego Perez Giordán ·
+                <a href="/blog/rss.xml">RSS</a>
+            </p>
+        </footer>
+    </body>
+</html>

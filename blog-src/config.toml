@@ -1,0 +1,23 @@
+# Zola config for the blog subtree. Output is built into ../blog and served
+# at https://diegoquinas.com/blog. The portfolio (root index.html) is
+# hand-crafted and lives outside this project - Zola only owns /blog.
+base_url = "https://diegoquinas.com/blog"
+title = "Diego Perez Giordán - Blog"
+description = "Notes on backend, systems, Go, Rust and AI."
+default_language = "en"
+
+# RSS feed at /blog/rss.xml (uses Zola's built-in feed template).
+generate_feeds = true
+feed_filenames = ["rss.xml"]
+
+# Compile sass/blog.scss -> /blog/blog.css. The portfolio's /style.css
+# (with its CSS variables) is linked first, so the blog inherits the theme.
+compile_sass = true
+minify_html = false
+
+# Built-in syntax highlighting. style = "inline" bakes hex colors into the
+# HTML (no extra CSS file). Swap theme for any built-in (e.g. "gruvbox-dark",
+# "dracula", "nord", "ayu-dark").
+[markdown.highlighting]
+style = "inline"
+theme = "gruvbox-dark-medium"

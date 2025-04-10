@@ -17,40 +17,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: dtolnay/rust-toolchain@stable
-        with:
-          targets: wasm32-unknown-unknown
-
-      - uses: Swatinem/rust-cache@v2
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-
-      - name: Install wasm-bindgen
-        run: cargo install wasm-bindgen-cli
-
-      - name: Install npm dependencies
-        run: npm ci
-
-      - name: Build Tailwind CSS
-        run: npx @tailwindcss/cli -i ./tailwind.css -o ./assets/tailwind.css
-
-      - name: Build WASM
+      - name: Prepare dist
         run: |
-          cargo build --bin diegoquinas-rs --target wasm32-unknown-unknown --features web --release
-          wasm-bindgen target/wasm32-unknown-unknown/release/diegoquinas-rs.wasm \
-            --out-dir dist/assets \
-            --target web
-
-      - name: Build SSG
-        run: cargo run --bin ssg --release
-
-      - name: Copy blog and root assets to dist
-        run: |
+          mkdir -p dist
+          cp index.html CNAME .nojekyll favicon.svg style.css og-image.png dist/
+          cp -r assets/ dist/assets/
           cp -r blog/ dist/blog/
-          cp style.css dist/style.css
-          cp favicon.svg dist/favicon.svg
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
