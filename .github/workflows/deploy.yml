@@ -46,8 +46,11 @@ jobs:
       - name: Build SSG
         run: cargo run --bin ssg --release
 
-      - name: Copy blog to dist
-        run: cp -r blog/ dist/blog/
+      - name: Copy blog and root assets to dist
+        run: |
+          cp -r blog/ dist/blog/
+          cp style.css dist/style.css
+          cp favicon.svg dist/favicon.svg
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
