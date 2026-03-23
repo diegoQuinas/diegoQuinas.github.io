@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diego Perez Giordan — Backend Engineer</title>
+  <meta name="description" content="Backend & Systems Engineer specializing in Go, Rust, and AI-assisted development.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">dpg<span class="accent">.</span></a>
+      <div class="nav-links">
+        <a href="#about" data-en="About" data-es="Sobre mi">About</a>
+        <a href="#experience" data-en="Experience" data-es="Experiencia">Experience</a>
+        <a href="#projects" data-en="Projects" data-es="Proyectos">Projects</a>
+        <a href="#skills" data-en="Skills" data-es="Skills">Skills</a>
+        <a href="#contact" data-en="Contact" data-es="Contacto">Contact</a>
+        <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+          <span class="lang-option active" data-lang="en">EN</span>
+          <span class="lang-separator">/</span>
+          <span class="lang-option" data-lang="es">ES</span>
+        </button>
+      </div>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" data-en="About" data-es="Sobre mi">About</a>
+    <a href="#experience" data-en="Experience" data-es="Experiencia">Experience</a>
+    <a href="#projects" data-en="Projects" data-es="Proyectos">Projects</a>
+    <a href="#skills" data-en="Skills" data-es="Skills">Skills</a>
+    <a href="#contact" data-en="Contact" data-es="Contacto">Contact</a>
+    <button class="lang-toggle" id="langToggleMobile" aria-label="Toggle language">
+      <span class="lang-option active" data-lang="en">EN</span>
+      <span class="lang-separator">/</span>
+      <span class="lang-option" data-lang="es">ES</span>
+    </button>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <p class="hero-greeting" data-en="Hi, I'm" data-es="Hola, soy">Hi, I'm</p>
+      <h1 class="hero-name">Diego Perez Giordan</h1>
+      <h2 class="hero-title" data-en="Backend & Systems Engineer" data-es="Ingeniero Backend & Sistemas">Backend & Systems Engineer</h2>
+      <p class="hero-subtitle">
+        <span class="typed-wrapper">
+          <span class="typed-text" id="typedText"></span>
+          <span class="typed-cursor">|</span>
+        </span>
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary" data-en="View Projects" data-es="Ver Proyectos">View Projects</a>
+        <a href="#contact" class="btn btn-outline" data-en="Get in Touch" data-es="Contacto">Get in Touch</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://github.com/diegoQuinas" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+        <a href="https://linkedin.com/in/diego-perez-giordan" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="mailto:diegoperezgiordan@gmail.com" aria-label="Email">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 010 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-indicator"></div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section-title" data-en="About Me" data-es="Sobre Mi">About Me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p data-en="Backend engineer based in Montevideo, Uruguay, with production experience building microservices in Go and a deep personal investment in Rust for systems programming, game engines, and developer tooling."
+             data-es="Ingeniero backend en Montevideo, Uruguay, con experiencia en produccion construyendo microservicios en Go y una profunda dedicacion personal a Rust para programacion de sistemas, motores de juegos y herramientas de desarrollo.">
+            Backend engineer based in Montevideo, Uruguay, with production experience building microservices in Go and a deep personal investment in Rust for systems programming, game engines, and developer tooling.
+          </p>
+          <p data-en="I build distributed systems that serve millions of users across Latin America, and in my own time I create open-source tools, game engines, and multiplayer games — all in Rust. I'm also deeply invested in AI-augmented development, using LLMs daily to accelerate architecture design, code review, and delivery."
+             data-es="Construyo sistemas distribuidos que sirven a millones de usuarios en Latinoamerica, y en mi tiempo libre creo herramientas open-source, motores de juegos y juegos multijugador — todo en Rust. Tambien estoy profundamente involucrado en el desarrollo asistido por IA, usando LLMs diariamente para acelerar el diseno de arquitectura, revision de codigo y entregas.">
+            I build distributed systems that serve millions of users across Latin America, and in my own time I create open-source tools, game engines, and multiplayer games — all in Rust. I'm also deeply invested in AI-augmented development, using LLMs daily to accelerate architecture design, code review, and delivery.
+          </p>
+          <p data-en="Advocate of compile-time safety, TDD, and clean architecture. I believe the best code is the code that the compiler already verified for you."
+             data-es="Defensor de la seguridad en tiempo de compilacion, TDD y arquitectura limpia. Creo que el mejor codigo es el que el compilador ya verifico por vos.">
+            Advocate of compile-time safety, TDD, and clean architecture. I believe the best code is the code that the compiler already verified for you.
+          </p>
+        </div>
+        <div class="about-highlights">
+          <div class="highlight-card">
+            <span class="highlight-number">14+</span>
+            <span class="highlight-label" data-en="Microservices in production" data-es="Microservicios en produccion">Microservices in production</span>
+          </div>
+          <div class="highlight-card">
+            <span class="highlight-number">800+</span>
+            <span class="highlight-label" data-en="GitHub stars on projects" data-es="Estrellas en GitHub">GitHub stars on projects</span>
+          </div>
+          <div class="highlight-card">
+            <span class="highlight-number">4</span>
+            <span class="highlight-label" data-en="Countries served" data-es="Paises servidos">Countries served</span>
+          </div>
+          <div class="highlight-card">
+            <span class="highlight-number">28+</span>
+            <span class="highlight-label" data-en="Public repositories" data-es="Repositorios publicos">Public repositories</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="section section-alt" id="experience">
+    <div class="container">
+      <h2 class="section-title" data-en="Experience" data-es="Experiencia">Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3>Backend Engineer (Go)</h3>
+                <p class="timeline-company">Cencosud S.A. — Digital Commerce</p>
+              </div>
+              <span class="timeline-date">2024 — Present</span>
+            </div>
+            <ul>
+              <li data-en="Develop and maintain Go microservices for a multi-country e-commerce platform (Argentina, Colombia, Brazil, USA) serving brands like Jumbo, Disco, and Prezunic"
+                  data-es="Desarrollo y mantengo microservicios en Go para una plataforma e-commerce multi-pais (Argentina, Colombia, Brasil, EEUU) sirviendo marcas como Jumbo, Disco y Prezunic">
+                Develop and maintain Go microservices for a multi-country e-commerce platform (Argentina, Colombia, Brazil, USA) serving brands like Jumbo, Disco, and Prezunic
+              </li>
+              <li data-en="Work across 14+ microservices: auth, cart, products, search, recommendations, coupons, notifications, session management, and loyalty"
+                  data-es="Trabajo en 14+ microservicios: auth, carrito, productos, busqueda, recomendaciones, cupones, notificaciones, sesiones y fidelidad">
+                Work across 14+ microservices: auth, cart, products, search, recommendations, coupons, notifications, session management, and loyalty
+              </li>
+              <li data-en="Build and maintain the Backend-for-Frontend (BFF) service, orchestrating downstream APIs for mobile and web clients"
+                  data-es="Construyo y mantengo el servicio Backend-for-Frontend (BFF), orquestando APIs downstream para clientes mobile y web">
+                Build and maintain the Backend-for-Frontend (BFF) service, orchestrating downstream APIs for mobile and web clients
+              </li>
+              <li data-en="Kubernetes-native environment (Rancher Desktop + Tilt) with GCP infrastructure, gRPC/Protobuf, sqlc, and golangci-lint"
+                  data-es="Entorno nativo de Kubernetes (Rancher Desktop + Tilt) con infraestructura GCP, gRPC/Protobuf, sqlc y golangci-lint">
+                Kubernetes-native environment (Rancher Desktop + Tilt) with GCP infrastructure, gRPC/Protobuf, sqlc, and golangci-lint
+              </li>
+            </ul>
+            <div class="timeline-tags">
+              <span>Go</span><span>gRPC</span><span>Kubernetes</span><span>GCP</span><span>PostgreSQL</span><span>sqlc</span><span>Tilt</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 data-en="Co-creator & Core Contributor" data-es="Co-creador & Contribuidor Principal">Co-creator & Core Contributor</h3>
+                <p class="timeline-company">ApiArk — Open Source</p>
+              </div>
+              <span class="timeline-date">2024 — Present</span>
+            </div>
+            <ul>
+              <li data-en="Co-built a privacy-first API platform (Tauri v2 + Rust + React) as a lightweight Postman alternative — 815+ GitHub stars, ~60 MB RAM vs 300-800 MB"
+                  data-es="Co-cree una plataforma API privacy-first (Tauri v2 + Rust + React) como alternativa liviana a Postman — 815+ estrellas en GitHub, ~60 MB RAM vs 300-800 MB">
+                Co-built a privacy-first API platform (Tauri v2 + Rust + React) as a lightweight Postman alternative — 815+ GitHub stars, ~60 MB RAM vs 300-800 MB
+              </li>
+              <li data-en="Multi-protocol support: REST, GraphQL, gRPC, WebSocket, SSE, MQTT, Socket.IO"
+                  data-es="Soporte multi-protocolo: REST, GraphQL, gRPC, WebSocket, SSE, MQTT, Socket.IO">
+                Multi-protocol support: REST, GraphQL, gRPC, WebSocket, SSE, MQTT, Socket.IO
+              </li>
+              <li data-en="Developed Rust backend: HTTP client (reqwest), mock server (axum), gRPC (tonic), scripting engine (deno_core)"
+                  data-es="Desarrolle el backend en Rust: cliente HTTP (reqwest), mock server (axum), gRPC (tonic), motor de scripting (deno_core)">
+                Developed Rust backend: HTTP client (reqwest), mock server (axum), gRPC (tonic), scripting engine (deno_core)
+              </li>
+              <li data-en="Built MCP server and VS Code extension for AI editor integration"
+                  data-es="Construi el servidor MCP y extension de VS Code para integracion con editores IA">
+                Built MCP server and VS Code extension for AI editor integration
+              </li>
+            </ul>
+            <div class="timeline-tags">
+              <span>Rust</span><span>Tauri</span><span>React</span><span>TypeScript</span><span>Axum</span><span>tonic</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot dot-edu"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 data-en="Systems Engineering" data-es="Ingenieria en Sistemas">Systems Engineering</h3>
+                <p class="timeline-company" data-en="University — 2 years completed" data-es="Universidad — 2 anos completados">University — 2 years completed</p>
+              </div>
+              <span class="timeline-date">2020 — 2022</span>
+            </div>
+            <p class="timeline-note" data-en="Paused to transition into professional software development."
+               data-es="Pausada para dedicarme al desarrollo de software profesional.">
+              Paused to transition into professional software development.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section" id="projects">
+    <div class="container">
+      <h2 class="section-title" data-en="Projects" data-es="Proyectos">Projects</h2>
+      <div class="projects-grid">
+
+        <a href="https://github.com/berbicanes/apiark" target="_blank" rel="noopener" class="project-card featured">
+          <div class="project-badge" data-en="Featured" data-es="Destacado">Featured</div>
+          <div class="project-header">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>
+            <div class="project-stars">815+</div>
+          </div>
+          <h3>ApiArk</h3>
+          <p data-en="Privacy-first API platform. Lightweight Postman alternative built with Tauri v2 + Rust + React. ~60 MB RAM, supports REST, GraphQL, gRPC, WebSocket, SSE, MQTT."
+             data-es="Plataforma API privacy-first. Alternativa liviana a Postman con Tauri v2 + Rust + React. ~60 MB RAM, soporta REST, GraphQL, gRPC, WebSocket, SSE, MQTT.">
+            Privacy-first API platform. Lightweight Postman alternative built with Tauri v2 + Rust + React. ~60 MB RAM, supports REST, GraphQL, gRPC, WebSocket, SSE, MQTT.
+          </p>
+          <div class="project-tags">
+            <span>Rust</span><span>Tauri v2</span><span>React</span><span>TypeScript</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/diegoQuinas/egor" target="_blank" rel="noopener" class="project-card">
+          <div class="project-header">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>
+            <div class="project-stars">128</div>
+          </div>
+          <h3>Egor</h3>
+          <p data-en="Dead simple cross-platform 2D graphics engine. Supports DirectX 12, Vulkan, Metal, OpenGL, and WebGPU/WASM. Plugin architecture."
+             data-es="Motor grafico 2D cross-platform ultra simple. Soporta DirectX 12, Vulkan, Metal, OpenGL y WebGPU/WASM. Arquitectura de plugins.">
+            Dead simple cross-platform 2D graphics engine. Supports DirectX 12, Vulkan, Metal, OpenGL, and WebGPU/WASM. Plugin architecture.
+          </p>
+          <div class="project-tags">
+            <span>Rust</span><span>wgpu</span><span>WGSL</span><span>WASM</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/diegoQuinas/dyrah" target="_blank" rel="noopener" class="project-card">
+          <div class="project-header">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>
+            <div class="project-stars">41</div>
+          </div>
+          <h3>Dyrah</h3>
+          <p data-en="Tibia-inspired multiplayer online RPG. Client-server architecture with ECS, tilemap rendering, collision detection, and real-time networking."
+             data-es="RPG multijugador online inspirado en Tibia. Arquitectura cliente-servidor con ECS, renderizado de tilemaps, deteccion de colisiones y networking en tiempo real.">
+            Tibia-inspired multiplayer online RPG. Client-server architecture with ECS, tilemap rendering, collision detection, and real-time networking.
+          </p>
+          <div class="project-tags">
+            <span>Rust</span><span>ECS</span><span>Multiplayer</span><span>Networking</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/diegoQuinas/bloomia-backend" target="_blank" rel="noopener" class="project-card">
+          <div class="project-header">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>
+          </div>
+          <h3>Bloomia</h3>
+          <p data-en="Full-stack flower e-commerce. Rust backend (Axum, PostgreSQL/sqlx) with Dioxus reactive frontend."
+             data-es="E-commerce de flores full-stack. Backend en Rust (Axum, PostgreSQL/sqlx) con frontend reactivo en Dioxus.">
+            Full-stack flower e-commerce. Rust backend (Axum, PostgreSQL/sqlx) with Dioxus reactive frontend.
+          </p>
+          <div class="project-tags">
+            <span>Rust</span><span>Axum</span><span>Dioxus</span><span>PostgreSQL</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/diegoQuinas" target="_blank" rel="noopener" class="project-card">
+          <div class="project-header">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>
+          </div>
+          <h3 data-en="Game Dev Projects" data-es="Proyectos de Juegos">Game Dev Projects</h3>
+          <p data-en="Mining Simulator, Orkish Defense, Tower Defense — multiple games built with Bevy ECS: state-driven logic, custom UI systems, entity management."
+             data-es="Mining Simulator, Orkish Defense, Tower Defense — multiples juegos con Bevy ECS: logica por estados, sistemas de UI custom, manejo de entidades.">
+            Mining Simulator, Orkish Defense, Tower Defense — multiple games built with Bevy ECS: state-driven logic, custom UI systems, entity management.
+          </p>
+          <div class="project-tags">
+            <span>Rust</span><span>Bevy</span><span>ECS</span><span>Game Dev</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid">
+
+        <div class="skill-category">
+          <h3 data-en="Languages" data-es="Lenguajes">Languages</h3>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>Go</span><span>Production</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill" style="width:90%"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>Rust</span><span>Advanced</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill" style="width:88%"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>TypeScript</span><span>Proficient</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill" style="width:70%"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>SQL</span><span>Proficient</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill" style="width:75%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Go Ecosystem</h3>
+          <div class="skill-tags">
+            <span>gRPC / Protobuf</span><span>sqlc</span><span>golangci-lint</span><span>buf</span><span>Tilt</span><span>net/http</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Rust Ecosystem</h3>
+          <div class="skill-tags">
+            <span>Axum</span><span>Tokio</span><span>sqlx</span><span>Tauri v2</span><span>reqwest</span><span>tonic</span><span>Bevy</span><span>wgpu</span><span>Ratatui</span><span>deno_core</span><span>serde</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3 data-en="Infrastructure" data-es="Infraestructura">Infrastructure</h3>
+          <div class="skill-tags">
+            <span>Kubernetes</span><span>Docker</span><span>GCP</span><span>AWS</span><span>Rancher</span><span>PostgreSQL</span><span>SQLite</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>AI & LLM</h3>
+          <div class="skill-tags highlight">
+            <span>Claude Code</span><span>GitHub Copilot</span><span>MCP Servers</span><span>LLM APIs</span><span>Prompt Engineering</span><span>AI Agents</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3 data-en="Practices" data-es="Practicas">Practices</h3>
+          <div class="skill-tags">
+            <span>TDD</span><span>Clean Architecture</span><span>Microservices</span><span>CI/CD</span><span>Code Review</span><span>ECS Pattern</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact">
+    <div class="container contact-container">
+      <h2 class="section-title" data-en="Get in Touch" data-es="Contacto">Get in Touch</h2>
+      <p class="contact-text"
+         data-en="I'm always open to new opportunities, collaborations, or just a good conversation about Rust, Go, or game development. Feel free to reach out!"
+         data-es="Siempre estoy abierto a nuevas oportunidades, colaboraciones, o simplemente una buena conversacion sobre Rust, Go o desarrollo de juegos. No dudes en escribirme!">
+        I'm always open to new opportunities, collaborations, or just a good conversation about Rust, Go, or game development. Feel free to reach out!
+      </p>
+      <div class="contact-links">
+        <a href="mailto:diegoperezgiordan@gmail.com" class="contact-card">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
+          <span>diegoperezgiordan@gmail.com</span>
+        </a>
+        <a href="https://linkedin.com/in/diego-perez-giordan" target="_blank" rel="noopener" class="contact-card">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          <span>linkedin.com/in/diego-perez-giordan</span>
+        </a>
+        <a href="https://github.com/diegoQuinas" target="_blank" rel="noopener" class="contact-card">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          <span>github.com/diegoQuinas</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p data-en="Built with vanilla HTML, CSS & JS. No frameworks needed."
+       data-es="Hecho con HTML, CSS y JS puro. Sin frameworks.">
+      Built with vanilla HTML, CSS & JS. No frameworks needed.
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
