@@ -28,15 +28,17 @@ document.querySelectorAll('.lang-toggle').forEach(btn => {
 const phrases = {
   en: [
     'Go microservices in production',
-    'Rust systems & game engines',
+    'Rust game engines & systems',
     'AI-augmented development',
-    'Open source contributor (800+ stars)',
+    'Self-taught since age 12',
+    'Retro MMORPG enthusiast',
   ],
   es: [
     'Microservicios Go en produccion',
-    'Sistemas & motores de juego en Rust',
+    'Motores de juegos & sistemas en Rust',
     'Desarrollo asistido por IA',
-    'Contribuidor open source (800+ estrellas)',
+    'Autodidacta desde los 12 anos',
+    'Entusiasta de MMORPGs retro',
   ],
 };
 
