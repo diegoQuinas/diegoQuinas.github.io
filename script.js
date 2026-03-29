@@ -1,5 +1,4 @@
 // ===== Language Toggle =====
-const translations = { en: {}, es: {} };
 let currentLang = 'en';
 
 function setLanguage(lang) {
@@ -8,7 +7,13 @@ function setLanguage(lang) {
 
   document.querySelectorAll('[data-en]').forEach(el => {
     const text = el.getAttribute(`data-${lang}`);
-    if (text) el.textContent = text;
+    if (text) {
+      if (el.classList.contains('has-code')) {
+        el.innerHTML = text;
+      } else {
+        el.textContent = text;
+      }
+    }
   });
 
   document.querySelectorAll('.lang-option').forEach(opt => {
