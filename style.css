@@ -708,9 +708,8 @@ img { max-width: 100%; display: block; }
   color: var(--text-muted);
 }
 .contact-card:hover {
-  border-color: var(--accent);
+  border-left: 3px solid var(--accent);
   color: var(--accent-soft);
-  transform: translateX(8px);
 }
 .contact-card svg { flex-shrink: 0; }
 .contact-card span { font-size: 14px; font-weight: 500; }
