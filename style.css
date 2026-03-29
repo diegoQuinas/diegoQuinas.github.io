@@ -484,7 +484,7 @@ img { max-width: 100%; display: block; }
 /* ===== Projects ===== */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
 .project-card {
@@ -499,12 +499,54 @@ img { max-width: 100%; display: block; }
 }
 .project-card:hover {
   border-color: var(--accent);
-  transform: translateY(-6px);
-  box-shadow: 0 12px 40px rgba(232, 118, 42, 0.1);
+  box-shadow: 0 0 20px rgba(232, 118, 42, 0.08) inset;
 }
 .project-card.featured {
+  grid-column: 1 / -1;
   border-color: var(--accent);
   background: linear-gradient(135deg, var(--surface) 0%, rgba(232, 118, 42, 0.05) 100%);
+}
+.project-featured-inner {
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  gap: 24px;
+  align-items: start;
+}
+.project-featured-left h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.project-spec {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 16px;
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+.spec-row {
+  display: flex;
+  gap: 12px;
+}
+.spec-key {
+  color: var(--text-muted);
+  min-width: 48px;
+}
+.spec-val {
+  color: var(--accent-soft);
+}
+.project-lang {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: lowercase;
+  margin-bottom: 12px;
+  display: block;
 }
 .project-badge {
   position: absolute;
@@ -521,9 +563,9 @@ img { max-width: 100%; display: block; }
 }
 .project-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   color: var(--text-muted);
 }
 .project-stars {
@@ -704,6 +746,7 @@ img { max-width: 100%; display: block; }
   .about-grid { grid-template-columns: 1fr; }
   .about-highlights { grid-template-columns: 1fr 1fr; }
   .projects-grid { grid-template-columns: 1fr; }
+  .project-featured-inner { grid-template-columns: 1fr; }
   .skills-grid { grid-template-columns: 1fr; }
   .timeline-header { flex-direction: column; gap: 4px; }
   .section { padding: 60px 20px; }
