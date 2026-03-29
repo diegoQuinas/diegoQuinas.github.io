@@ -217,13 +217,6 @@ img { max-width: 100%; display: block; }
   font-size: 15px;
   color: var(--accent-soft);
   margin-bottom: 36px;
-  height: 24px;
-}
-.typed-cursor {
-  animation: blink 1s step-end infinite;
-}
-@keyframes blink {
-  50% { opacity: 0; }
 }
 .hero-cta {
   display: flex;

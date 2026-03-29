@@ -14,8 +14,6 @@ function setLanguage(lang) {
   document.querySelectorAll('.lang-option').forEach(opt => {
     opt.classList.toggle('active', opt.dataset.lang === lang);
   });
-
-  startTyping();
 }
 
 document.querySelectorAll('.lang-toggle').forEach(btn => {
@@ -23,65 +21,6 @@ document.querySelectorAll('.lang-toggle').forEach(btn => {
     setLanguage(currentLang === 'en' ? 'es' : 'en');
   });
 });
-
-// ===== Typing Effect =====
-const phrases = {
-  en: [
-    'Go microservices in production',
-    'Rust game engines & systems',
-    'AI-augmented development',
-    'Self-taught since age 12',
-    'Retro MMORPG enthusiast',
-  ],
-  es: [
-    'Microservicios Go en produccion',
-    'Motores de juegos & sistemas en Rust',
-    'Desarrollo asistido por IA',
-    'Autodidacta desde los 12 anos',
-    'Entusiasta de MMORPGs retro',
-  ],
-};
-
-let typingTimeout;
-function startTyping() {
-  const el = document.getElementById('typedText');
-  if (!el) return;
-
-  clearTimeout(typingTimeout);
-  el.textContent = '';
-
-  const currentPhrases = phrases[currentLang];
-  let phraseIndex = 0;
-  let charIndex = 0;
-  let isDeleting = false;
-
-  function type() {
-    const phrase = currentPhrases[phraseIndex];
-
-    if (!isDeleting) {
-      el.textContent = phrase.substring(0, charIndex + 1);
-      charIndex++;
-      if (charIndex === phrase.length) {
-        isDeleting = true;
-        typingTimeout = setTimeout(type, 2000);
-        return;
-      }
-      typingTimeout = setTimeout(type, 50);
-    } else {
-      el.textContent = phrase.substring(0, charIndex - 1);
-      charIndex--;
-      if (charIndex === 0) {
-        isDeleting = false;
-        phraseIndex = (phraseIndex + 1) % currentPhrases.length;
-        typingTimeout = setTimeout(type, 400);
-        return;
-      }
-      typingTimeout = setTimeout(type, 30);
-    }
-  }
-
-  typingTimeout = setTimeout(type, 600);
-}
 
 // ===== Navbar scroll effect =====
 const nav = document.getElementById('nav');
@@ -175,7 +114,6 @@ function initActiveNav() {
 
 // ===== Init =====
 document.addEventListener('DOMContentLoaded', () => {
-  startTyping();
   initScrollAnimations();
   initSkillBars();
   initActiveNav();
