@@ -340,15 +340,23 @@ img { max-width: 100%; display: block; }
 .highlight-card {
   background: var(--surface);
   border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
   border-radius: var(--radius);
   padding: 20px;
   text-align: center;
-  transition: all var(--transition);
+  transition: border-color var(--transition);
 }
 .highlight-card:hover {
   border-color: var(--accent);
-  transform: translateY(-4px);
-  box-shadow: 0 8px 30px rgba(232, 118, 42, 0.1);
+}
+.highlight-tag {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
 }
 .highlight-number {
   display: block;
