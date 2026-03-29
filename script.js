@@ -130,14 +130,18 @@ function initScrollAnimations() {
 
 // ===== Skill bar animation =====
 function initSkillBars() {
+  document.querySelectorAll('.skill-bar-fill').forEach(fill => {
+    fill.style.setProperty('--target-width', fill.style.width);
+  });
+
   const observer = new IntersectionObserver(
     entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          const fills = entry.target.querySelectorAll('.skill-bar-fill');
-          fills.forEach(fill => {
-            fill.style.width = fill.style.width; // trigger reflow
+          entry.target.querySelectorAll('.skill-bar-fill').forEach(fill => {
+            fill.classList.add('animated');
           });
+          observer.unobserve(entry.target);
         }
       });
     },
@@ -147,9 +151,32 @@ function initSkillBars() {
   document.querySelectorAll('.skill-bars').forEach(el => observer.observe(el));
 }
 
+// ===== Active nav link on scroll =====
+function initActiveNav() {
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          navLinks.forEach(link => {
+            link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+          });
+        }
+      });
+    },
+    { threshold: 0.3, rootMargin: '-80px 0px -50% 0px' }
+  );
+
+  sections.forEach(section => observer.observe(section));
+}
+
 // ===== Init =====
 document.addEventListener('DOMContentLoaded', () => {
   startTyping();
   initScrollAnimations();
   initSkillBars();
+  initActiveNav();
 });
