@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="glow" cx="85%" cy="20%" r="55%">
+      <stop offset="0%" stop-color="#e8762a" stop-opacity="0.22"/>
+      <stop offset="55%" stop-color="#e8762a" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#0c0a09" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="nameGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e7e5e4"/>
+      <stop offset="100%" stop-color="#a8a29e"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="#0c0a09"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <g transform="translate(80, 110)">
+    <text font-family="JetBrains Mono, monospace" font-weight="700" font-size="32" fill="#e7e5e4">dpg</text>
+    <text x="68" font-family="JetBrains Mono, monospace" font-weight="700" font-size="32" fill="#e8762a">.</text>
+  </g>
+
+  <g transform="translate(80, 290)">
+    <text font-family="Noto Sans, sans-serif" font-weight="800" font-size="84" fill="url(#nameGrad)" letter-spacing="-2">Diego Perez Giordán</text>
+  </g>
+
+  <g transform="translate(80, 370)">
+    <text font-family="Noto Sans, sans-serif" font-weight="600" font-size="38" fill="#f59e0b">Backend Engineer</text>
+    <text x="356" font-family="Noto Sans, sans-serif" font-weight="400" font-size="38" fill="#a8a29e"> — Go · Rust · Node.js</text>
+  </g>
+
+  <g transform="translate(80, 530)">
+    <text font-family="JetBrains Mono, monospace" font-weight="500" font-size="24" fill="#e8762a">&gt;</text>
+    <text x="28" font-family="JetBrains Mono, monospace" font-weight="400" font-size="24" fill="#a8a29e">building microservices @ Cencosud · Canelones, Uruguay</text>
+  </g>
+
+  <rect x="80" y="558" width="120" height="2" fill="#e8762a"/>
+</svg>
