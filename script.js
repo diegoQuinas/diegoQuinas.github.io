@@ -1,32 +1,3 @@
-// ===== Language Toggle =====
-let currentLang = 'en';
-
-function setLanguage(lang) {
-  currentLang = lang;
-  document.documentElement.setAttribute('data-lang', lang);
-
-  document.querySelectorAll('[data-en]').forEach(el => {
-    const text = el.getAttribute(`data-${lang}`);
-    if (text) {
-      if (el.classList.contains('has-code')) {
-        el.innerHTML = text;
-      } else {
-        el.textContent = text;
-      }
-    }
-  });
-
-  document.querySelectorAll('.lang-option').forEach(opt => {
-    opt.classList.toggle('active', opt.dataset.lang === lang);
-  });
-}
-
-document.querySelectorAll('.lang-toggle').forEach(btn => {
-  btn.addEventListener('click', () => {
-    setLanguage(currentLang === 'en' ? 'es' : 'en');
-  });
-});
-
 // ===== Navbar scroll effect =====
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
