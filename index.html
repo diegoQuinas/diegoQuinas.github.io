@@ -36,6 +36,7 @@
       <div class="nav-links">
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
+        <a href="#opensource">Open Source</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
@@ -50,6 +51,7 @@
   <div class="mobile-menu" id="mobileMenu">
     <a href="#about">About</a>
     <a href="#experience">Experience</a>
+    <a href="#opensource">Open Source</a>
     <a href="#projects">Projects</a>
     <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
@@ -211,32 +213,61 @@
     </div>
   </section>
 
+  <!-- Open Source -->
+  <section class="section section-alt" id="opensource">
+    <div class="container">
+      <h2 class="section-title">Open Source</h2>
+      <p class="section-lead">
+        Contributing upstream to <span class="code">Apache DataFusion</span> — an Apache top-level Rust-based SQL query engine, used by Polars, InfluxDB IOx, and Apache Comet.
+      </p>
+
+      <div class="projects-grid">
+
+        <a href="https://github.com/apache/datafusion/pull/21710" target="_blank" rel="noopener" class="project-card featured">
+          <div class="project-badge">Approved</div>
+          <div class="project-featured-inner">
+            <div class="project-featured-left">
+              <p class="project-repo">apache/datafusion · PR #21710</p>
+              <h3>2-argument <span class="code">ceil(value, scale)</span> for Spark compatibility</h3>
+              <p>
+                Extended <span class="code">datafusion-spark</span>'s <span class="code">ceil</span> function with an optional <span class="code">scale</span> parameter, matching Apache Spark SQL semantics (<span class="code">ceil(3.145, 2) → 3.15</span>). Reworked the function's <span class="code">Signature</span> to accept 1 or 2 arguments and corrected the <span class="code">return_type</span> so floats preserve their type when a scale is provided. Iterated with the maintainers — including <span class="code">@Jefffrey</span> — through code review until the change reached APPROVED status.
+              </p>
+              <div class="project-tags">
+                <span>Rust</span><span>SQL</span><span>Query Engine</span><span>Apache</span><span>Spark Compatibility</span>
+              </div>
+            </div>
+            <div class="project-spec">
+              <div class="spec-row"><span class="spec-key">repo</span><span class="spec-val">apache/datafusion</span></div>
+              <div class="spec-row"><span class="spec-key">pr</span><span class="spec-val">#21710</span></div>
+              <div class="spec-row"><span class="spec-key">status</span><span class="spec-val">approved · open</span></div>
+              <div class="spec-row"><span class="spec-key">diff</span><span class="spec-val">+409 / −192</span></div>
+              <div class="spec-row"><span class="spec-key">files</span><span class="spec-val">6 changed</span></div>
+              <div class="spec-row"><span class="spec-key">lang</span><span class="spec-val">Rust</span></div>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://github.com/apache/datafusion/pull/21728" target="_blank" rel="noopener" class="project-card">
+          <div class="project-badge">In review</div>
+          <p class="project-repo">apache/datafusion · PR #21728</p>
+          <h3>Render binary columns as hex in <span class="code">DataFrame::describe()</span></h3>
+          <p>
+            Fixed how <span class="code">DataFrame::describe()</span> renders <span class="code">Binary</span>, <span class="code">FixedSizeBinary</span>, and <span class="code">LargeBinary</span> columns — previously the statistical summary produced unreadable output for these types. The fix renders them as hex consistently across <span class="code">min</span>, <span class="code">max</span>, and <span class="code">median</span>. Closes issue #21496.
+          </p>
+          <div class="project-tags">
+            <span>Rust</span><span>Apache</span><span>DataFrame</span><span>Bug Fix</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
   <!-- Projects -->
   <section class="section" id="projects">
     <div class="container">
       <h2 class="section-title">Projects</h2>
       <div class="projects-grid">
-
-        <a href="https://github.com/apache/datafusion/pull/21562" target="_blank" rel="noopener" class="project-card featured">
-          <div class="project-badge">Featured · Open Source</div>
-          <div class="project-featured-inner">
-            <div class="project-featured-left">
-              <h3>Apache DataFusion</h3>
-              <p>
-                Contributing to <span class="code">Apache DataFusion</span> — an extensible Rust-based SQL query engine and Apache top-level project used by Polars, InfluxDB IOx, and Apache Comet. PR #21562 implemented an optional <span class="code">scale</span> parameter for the <span class="code">ceil</span> function for Apache Spark SQL compatibility; iterated with maintainers through code review until merged.
-              </p>
-              <div class="project-tags">
-                <span>Rust</span><span>Apache</span><span>SQL</span><span>Query Engine</span><span>Open Source</span>
-              </div>
-            </div>
-            <div class="project-spec">
-              <div class="spec-row"><span class="spec-key">lang</span><span class="spec-val">Rust</span></div>
-              <div class="spec-row"><span class="spec-key">domain</span><span class="spec-val">query engine</span></div>
-              <div class="spec-row"><span class="spec-key">pr</span><span class="spec-val">#21562 merged</span></div>
-              <div class="spec-row"><span class="spec-key">status</span><span class="spec-val">contributing</span></div>
-            </div>
-          </div>
-        </a>
 
         <a href="https://github.com/diegoQuinas/bloomia-backend" target="_blank" rel="noopener" class="project-card">
           <span class="project-lang">rs</span>
