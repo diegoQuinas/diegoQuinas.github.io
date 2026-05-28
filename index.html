@@ -218,7 +218,7 @@
     <div class="container">
       <h2 class="section-title">Open Source</h2>
       <p class="section-lead">
-        Contributing upstream to <span class="code">Apache DataFusion</span> — an Apache top-level Rust-based SQL query engine, used by Polars, InfluxDB IOx, and Apache Comet.
+        Contributing upstream to open-source projects in Rust — primarily <span class="code">Apache DataFusion</span>, an Apache top-level SQL query engine used by Polars, InfluxDB IOx, and Apache Comet, plus <span class="code">ApiArk</span>, a Tauri-based privacy-first API client.
       </p>
 
       <div class="projects-grid">
@@ -259,6 +259,18 @@
           </div>
         </a>
 
+        <a href="https://github.com/berbicanes/apiark/pulls?q=author%3AdiegoQuinas" target="_blank" rel="noopener" class="project-card">
+          <div class="project-badge">In review</div>
+          <p class="project-repo">berbicanes/apiark · PR #79, #81 · Issue #78</p>
+          <h3>Feature &amp; fixes for <span class="code">ApiArk</span>, a Tauri API client</h3>
+          <p>
+            Contributing to <span class="code">ApiArk</span> — a privacy-first, Tauri v2 alternative to Postman (no login, no cloud, ~60 MB RAM). Proposed an "open requests" feature as issue #78 and implemented it myself in PR #79 (<span class="code">feat(tabs): add open requests dropdown</span>), plus a separate bug fix in PR #81 correcting cURL <span class="code">-b/--cookie</span> parsing so it maps to the <span class="code">Cookie</span> header.
+          </p>
+          <div class="project-tags">
+            <span>Tauri</span><span>Rust</span><span>TypeScript</span><span>Open Source</span>
+          </div>
+        </a>
+
       </div>
     </div>
   </section>
@@ -269,15 +281,6 @@
       <h2 class="section-title">Projects</h2>
       <div class="projects-grid">
 
-        <a href="https://github.com/diegoQuinas/bloomia-backend" target="_blank" rel="noopener" class="project-card">
-          <span class="project-lang">rs</span>
-          <h3>Bloomia</h3>
-          <p>Full-stack flower e-commerce application. Rust backend built with Axum, PostgreSQL/sqlx for async compile-time checked queries, and Dioxus reactive frontend.</p>
-          <div class="project-tags">
-            <span>Rust</span><span>Axum</span><span>Dioxus</span><span>PostgreSQL</span><span>sqlx</span>
-          </div>
-        </a>
-
         <div class="project-card">
           <div class="project-badge">In progress</div>
           <span class="project-lang">rs</span>
@@ -287,15 +290,6 @@
             <span>Rust</span><span>Query Engine</span><span>Columnar</span><span>Personal</span>
           </div>
         </div>
-
-        <a href="https://github.com/diegoQuinas/apiark" target="_blank" rel="noopener" class="project-card">
-          <span class="project-lang">ts</span>
-          <h3>ApiArk</h3>
-          <p>Privacy-first API platform built with Tauri v2. A lightweight Postman alternative — no login, no cloud, ~60 MB RAM. Monorepo with desktop, CLI, web, MCP server, and VS Code extension.</p>
-          <div class="project-tags">
-            <span>Tauri</span><span>Rust</span><span>TypeScript</span><span>pnpm</span><span>Turborepo</span>
-          </div>
-        </a>
 
         <a href="https://github.com/diegoQuinas/liturgia-horas-tui" target="_blank" rel="noopener" class="project-card">
           <span class="project-lang">rs</span>
