@@ -1,0 +1,215 @@
+// Blog-only styles. The portfolio's style.css is loaded first and defines the
+// CSS custom properties (--bg, --accent, --font, etc.) used below.
+
+.blog-main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 120px 24px 80px;
+    min-height: 70vh;
+}
+
+.blog-container {
+    width: 100%;
+}
+
+// ===== Listing =====
+.blog-header {
+    margin-bottom: 3rem;
+
+    h1 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        letter-spacing: -1px;
+    }
+
+    .blog-subtitle {
+        margin-top: 0.5rem;
+        color: var(--text-muted);
+    }
+}
+
+.post-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.post-item {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 2rem;
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.post-link {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+
+    &:hover .post-title {
+        color: var(--accent);
+    }
+}
+
+.post-date {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.post-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    transition: color var(--transition);
+}
+
+.post-desc {
+    margin-top: 0.5rem;
+    color: var(--text-muted);
+}
+
+.post-empty {
+    color: var(--text-muted);
+}
+
+// ===== Single post =====
+.back-link {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    transition: color var(--transition);
+
+    &:hover {
+        color: var(--accent);
+    }
+}
+
+.post-head h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1.2;
+}
+
+.post-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.post-tags {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.tag {
+    background: var(--accent-glow);
+    color: var(--accent-soft);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+// ===== Prose =====
+.post-body {
+    margin-top: 2.5rem;
+    font-size: 1.05rem;
+
+    p,
+    ul,
+    ol {
+        margin: 1.25rem 0;
+    }
+
+    h2 {
+        margin: 2.5rem 0 1rem;
+        font-size: 1.6rem;
+    }
+
+    h3 {
+        margin: 2rem 0 0.75rem;
+        font-size: 1.3rem;
+    }
+
+    ul,
+    ol {
+        padding-left: 1.5rem;
+    }
+
+    ul {
+        list-style: disc;
+    }
+
+    ol {
+        list-style: decimal;
+    }
+
+    a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 2px;
+    }
+
+    blockquote {
+        border-left: 3px solid var(--accent);
+        padding-left: 1rem;
+        margin: 1.5rem 0;
+        color: var(--text-muted);
+    }
+
+    // Inline code.
+    p code,
+    li code {
+        font-family: var(--font-mono);
+        font-size: 0.9em;
+        background: var(--accent-glow);
+        color: var(--accent-soft);
+        padding: 2px 6px;
+        border-radius: 4px;
+    }
+
+    // Highlighted code blocks (inline background comes from the Zola theme).
+    pre {
+        margin: 1.5rem 0;
+        padding: 1rem 1.25rem;
+        border-radius: var(--radius-sm);
+        border: 1px solid var(--border);
+        overflow-x: auto;
+        font-family: var(--font-mono);
+        font-size: 0.9rem;
+        line-height: 1.5;
+
+        code {
+            background: none;
+            color: inherit;
+            padding: 0;
+        }
+    }
+}
+
+// ===== Footer =====
+.blog-footer {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 2rem 24px 3rem;
+    border-top: 1px solid var(--border);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+
+    a {
+        color: var(--text-muted);
+        transition: color var(--transition);
+
+        &:hover {
+            color: var(--accent);
+        }
+    }
+}

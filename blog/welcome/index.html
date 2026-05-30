@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Building a blog the lazy-but-clean way — Diego Perez Giordán</title>
+        <meta
+            name="description"
+            content="Why I bolted a Zola-generated blog onto a hand-crafted vanilla portfolio instead of rewriting everything."
+        />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Portfolio theme (CSS variables, fonts, nav) — reused as-is. -->
+        <link rel="stylesheet" href="/style.css" />
+        <!-- Blog-only additions (prose + code blocks). -->
+        <link rel="stylesheet" href="https://diegoperezgiordan.dev/blog/blog.css" />
+        <link
+            rel="alternate"
+            type="application/rss+xml"
+            title="RSS"
+            href="https://diegoperezgiordan.dev/blog/rss.xml"
+        />
+    </head>
+    <body>
+        <nav class="nav scrolled">
+            <div class="nav-inner">
+                <a href="/" class="nav-logo">dpg<span class="accent">.</span></a>
+                <div class="nav-links">
+                    <a href="/">Home</a>
+                    <a href="/blog/" class="active">Blog</a>
+                </div>
+            </div>
+        </nav>
+
+        <main class="blog-main">
+            
+<article class="blog-container post">
+    <header class="post-head">
+        <a class="back-link" href="/blog/">← All posts</a>
+        <h1>Building a blog the lazy-but-clean way</h1>
+        <div class="post-meta">
+            <time datetime="2026-05-29"
+                >May 29, 2026</time
+            >
+            
+            <span class="post-tags">
+                <span class="tag"
+                    >meta</span
+                ><span class="tag"
+                    >rust</span
+                ><span class="tag"
+                    >zola</span
+                >
+            </span>
+            
+        </div>
+    </header>
+
+    <div class="post-body">
+        <p>This portfolio was vanilla HTML, CSS and JavaScript — no framework, no build
+step, zero dependencies. I wanted a blog without throwing that away.</p>
+<p>So the blog is a bolt-on: Zola generates <code>/blog</code> from Markdown and reuses the
+portfolio's stylesheet. The home page stays hand-crafted.</p>
+<p>A bit of code, to check that syntax highlighting works:</p>
+<pre class="giallo" style="color: #EBDBB2; background-color: #282828;"><code data-lang="rust"><span class="giallo-l"><span style="color: #FB4934;">fn</span><span style="color: #FABD2F;"> main</span><span style="color: #A89984;">() {</span></span>
+<span class="giallo-l"><span style="color: #FE8019;">    let</span><span style="color: #83A598;"> greeting</span><span style="color: #8EC07C;"> =</span><span style="color: #A89984;"> &quot;</span><span style="color: #B8BB26;">Hello from the blog</span><span style="color: #A89984;">&quot;;</span></span>
+<span class="giallo-l"><span style="color: #FABD2F;">    println!</span><span style="color: #A89984;">(&quot;{</span><span style="color: #B8BB26;">greeting</span><span style="color: #A89984;">}&quot;);</span></span>
+<span class="giallo-l"><span style="color: #A89984;">}</span></span></code></pre>
+<p>And inline <code>code</code> renders with the accent color too.</p>
+<p>That's the whole idea: write Markdown, run <code>make blog</code>, push.</p>
+
+    </div>
+</article>
+
+        </main>
+
+        <footer class="blog-footer">
+            <p>
+                © Diego Perez Giordán ·
+                <a href="https://diegoperezgiordan.dev/blog/rss.xml">RSS</a>
+            </p>
+        </footer>
+    </body>
+</html>

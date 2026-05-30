@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>Diego Perez Giordán — Blog</title>
+      <link>https://diegoperezgiordan.dev/blog</link>
+      <description>Notes on backend, systems, Go, Rust and AI.</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://diegoperezgiordan.dev/blog/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Fri, 29 May 2026 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Building a blog the lazy-but-clean way</title>
+          <pubDate>Fri, 29 May 2026 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://diegoperezgiordan.dev/blog/welcome/</link>
+          <guid>https://diegoperezgiordan.dev/blog/welcome/</guid>
+          <description xml:base="https://diegoperezgiordan.dev/blog/welcome/">&lt;p&gt;This portfolio was vanilla HTML, CSS and JavaScript — no framework, no build
+step, zero dependencies. I wanted a blog without throwing that away.&lt;&#x2F;p&gt;
+&lt;p&gt;So the blog is a bolt-on: Zola generates &lt;code&gt;&#x2F;blog&lt;&#x2F;code&gt; from Markdown and reuses the
+portfolio&#x27;s stylesheet. The home page stays hand-crafted.&lt;&#x2F;p&gt;
+&lt;p&gt;A bit of code, to check that syntax highlighting works:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #EBDBB2; background-color: #282828;&quot;&gt;&lt;code data-lang=&quot;rust&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FB4934;&quot;&gt;fn&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FABD2F;&quot;&gt; main&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A89984;&quot;&gt;() {&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FE8019;&quot;&gt;    let&lt;&#x2F;span&gt;&lt;span style=&quot;color: #83A598;&quot;&gt; greeting&lt;&#x2F;span&gt;&lt;span style=&quot;color: #8EC07C;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A89984;&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #B8BB26;&quot;&gt;Hello from the blog&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A89984;&quot;&gt;&amp;quot;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FABD2F;&quot;&gt;    println!&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A89984;&quot;&gt;(&amp;quot;{&lt;&#x2F;span&gt;&lt;span style=&quot;color: #B8BB26;&quot;&gt;greeting&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A89984;&quot;&gt;}&amp;quot;);&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #A89984;&quot;&gt;}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;And inline &lt;code&gt;code&lt;&#x2F;code&gt; renders with the accent color too.&lt;&#x2F;p&gt;
+&lt;p&gt;That&#x27;s the whole idea: write Markdown, run &lt;code&gt;make blog&lt;&#x2F;code&gt;, push.&lt;&#x2F;p&gt;
+</description>
+      </item>
+    </channel>
+</rss>
