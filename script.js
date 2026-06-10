@@ -1,10 +1,8 @@
-// ===== Navbar scroll effect =====
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 50);
 });
 
-// ===== Mobile menu =====
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
 
@@ -22,12 +20,8 @@ mobileMenu.querySelectorAll('a').forEach(link => {
   });
 });
 
-// ===== Scroll animations =====
-function initScrollAnimations() {
-  const elements = document.querySelectorAll(
-    '.about-text p, .highlight-card, .timeline-item, .project-card, .skill-category, .contact-card'
-  );
-  elements.forEach(el => el.classList.add('fade-in'));
+function initReveal() {
+  const elements = document.querySelectorAll('.reveal');
 
   const observer = new IntersectionObserver(
     entries => {
@@ -43,30 +37,6 @@ function initScrollAnimations() {
   elements.forEach(el => observer.observe(el));
 }
 
-// ===== Skill bar animation =====
-function initSkillBars() {
-  document.querySelectorAll('.skill-bar-fill').forEach(fill => {
-    fill.style.setProperty('--target-width', fill.style.width);
-  });
-
-  const observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.querySelectorAll('.skill-bar-fill').forEach(fill => {
-            fill.classList.add('animated');
-          });
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.3 }
-  );
-
-  document.querySelectorAll('.skill-bars').forEach(el => observer.observe(el));
-}
-
-// ===== Active nav link on scroll =====
 function initActiveNav() {
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
@@ -88,9 +58,7 @@ function initActiveNav() {
   sections.forEach(section => observer.observe(section));
 }
 
-// ===== Init =====
 document.addEventListener('DOMContentLoaded', () => {
-  initScrollAnimations();
-  initSkillBars();
+  initReveal();
   initActiveNav();
 });
