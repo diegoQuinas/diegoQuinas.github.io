@@ -227,8 +227,8 @@ img { max-width: 100%; display: block; }
 
 /* Card specific sizings */
 .card-bio { grid-column: span 3; grid-row: span 2; justify-content: space-between; }
-.card-avatar { grid-column: span 1; grid-row: span 1; align-items: center; justify-content: center; padding: 0; }
-.card-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.card-avatar { grid-column: span 1; grid-row: span 1; align-items: center; justify-content: center; padding: 0; aspect-ratio: 1; }
+.card-avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
 .card-location { grid-column: span 1; grid-row: span 1; align-items: center; justify-content: center; text-align: center; }
 .card-stack { grid-column: span 4; grid-row: span 1; }
 
@@ -527,7 +527,7 @@ img { max-width: 100%; display: block; }
 @media (max-width: 900px) {
   .bento-grid { grid-template-columns: 1fr 1fr; }
   .card-bio { grid-column: span 2; }
-  .card-avatar { grid-column: span 1; aspect-ratio: 1; }
+  .card-avatar { grid-column: span 1; }
   .card-location { grid-column: span 1; }
   .card-stack { grid-column: span 2; }
   .featured-inner { grid-template-columns: 1fr; gap: 24px; }
