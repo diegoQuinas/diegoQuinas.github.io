@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Blog - Diego Perez Giordán</title>
+        <meta
+            name="description"
+            content="Notes on backend, systems, Go, Rust and AI."
+        />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Portfolio theme (CSS variables, fonts, nav) - reused as-is. -->
+        <link rel="stylesheet" href="/style.css" />
+        <!-- Blog-only additions (prose + code blocks). Root-relative so it
+             resolves both locally (http server) and in production. -->
+        <link rel="stylesheet" href="/blog/blog.css" />
+        <link
+            rel="alternate"
+            type="application/rss+xml"
+            title="RSS"
+            href="/blog/rss.xml"
+        />
+    </head>
+    <body>
+        <nav class="nav scrolled">
+            <div class="nav-inner">
+                <a href="/" class="nav-logo">dpg<span class="accent">.</span></a>
+                <div class="nav-links">
+                    <a href="/">Home</a>
+                    <a href="/blog/" class="active">Blog</a>
+                </div>
+            </div>
+        </nav>
+
+        <main class="blog-main">
+            
+<div class="blog-container">
+    <header class="blog-header">
+        <h1>Blog</h1>
+        <p class="blog-subtitle">Notes on backend, systems, Go, Rust and AI.</p>
+    </header>
+
+    <ul class="post-list">
+        
+        <li class="post-item">
+            <a class="post-link" href="/blog/welcome/">
+                <time class="post-date" datetime="2026-05-29"
+                    >May 29, 2026</time
+                >
+                <span class="post-title">Building a blog the lazy-but-clean way</span>
+            </a>
+            
+            <p class="post-desc">Why I bolted a Zola-generated blog onto a hand-crafted vanilla portfolio instead of rewriting everything.</p>
+            
+        </li>
+        
+    </ul>
+</div>
+
+        </main>
+
+        <footer class="blog-footer">
+            <p>
+                © Diego Perez Giordán ·
+                <a href="/blog/rss.xml">RSS</a>
+            </p>
+        </footer>
+    </body>
+</html>
