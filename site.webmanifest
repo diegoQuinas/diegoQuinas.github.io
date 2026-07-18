@@ -1,0 +1,21 @@
+{
+  "name": "Diego Perez Giordán - Backend Engineer",
+  "short_name": "dpg.",
+  "description": "Backend Engineer at Cencosud building Go microservices. Apache DataFusion open-source contributor in Rust.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0c0a09",
+  "theme_color": "#e8762a",
+  "icons": [
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

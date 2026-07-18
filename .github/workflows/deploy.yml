@@ -20,7 +20,7 @@ jobs:
       - name: Prepare dist
         run: |
           mkdir -p dist
-          cp index.html CNAME .nojekyll favicon.svg style.css og-image.png dist/
+          cp index.html CNAME .nojekyll favicon.svg favicon.ico style.css og-image.png dist/
           cp -r assets/ dist/assets/
           cp -r blog/ dist/blog/
 
