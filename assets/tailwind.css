@@ -610,8 +610,14 @@
   .pt-\[120px\] {
     padding-top: 120px;
   }
+  .pt-16 {
+    padding-top: calc(var(--spacing) * 16);
+  }
   .pb-\[60px\] {
     padding-bottom: 60px;
+  }
+  .pb-\[120px\] {
+    padding-bottom: 120px;
   }
   .text-center {
     text-align: center;
