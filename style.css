@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --bg: #050505;
   --surface: #121212;
@@ -101,6 +105,16 @@ ul { list-style: none; }
 .hero-fade {
   height: 64px;
   background: linear-gradient(to bottom, #ffffff, #050505);
+}
+
+#about {
+  padding-top: 5rem;
+}
+
+@media (min-width: 768px) {
+  #about {
+    padding-top: 6rem;
+  }
 }
 
 .code {
