@@ -98,6 +98,11 @@ ul { list-style: none; }
   pointer-events: none;
 }
 
+.hero-fade {
+  height: 64px;
+  background: linear-gradient(to bottom, #ffffff, #050505);
+}
+
 .code {
   font-family: var(--font-mono);
   font-size: 0.85em;

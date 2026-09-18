@@ -96,6 +96,18 @@
         background: linear-gradient(to bottom, transparent, #ffffff);
         pointer-events: none;
       }
+      .hero-fade {
+        height: 64px;
+        background: linear-gradient(to bottom, #ffffff, #050505);
+      }
+      #about {
+        padding-top: 5rem;
+      }
+      @media (min-width: 768px) {
+        #about {
+          padding-top: 6rem;
+        }
+      }
       .text-hero-dark {
         color: #18181b;
       }
@@ -267,8 +279,9 @@
           />
         </div>
       </section>
+      <div class="hero-fade" aria-hidden="true"></div>
     </div>
-    <section id="about" class="pt-16 pb-[120px] px-6">
+    <section id="about" class="pt-20 md:pt-24 pb-[120px] px-6">
       <div class="max-w-5xl mx-auto">
         <div class="grid grid-cols-4 auto-rows-[minmax(200px,auto)] gap-6">
           <div
